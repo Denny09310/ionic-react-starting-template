@@ -27,10 +27,8 @@ const HomeStack: React.FC<RouteComponentProps> = ({ match }) => {
 };
 
 const HomeIndex = () => {
-  const presentingEl = useRef<HTMLElement>(null);
-
   return (
-    <IonPage ref={presentingEl}>
+    <IonPage>
       <IonHeader className="ion-no-border">
         <IonToolbar>
           <IonTitle>Home</IonTitle>
