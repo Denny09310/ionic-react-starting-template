@@ -231,3 +231,8 @@ body.dark {
 
   --ion-card-background: #1e1e1e;
 }
+
+/* Remove the text from md back button by default */
+.md ion-back-button::part(text) {
+  display: none;
+}

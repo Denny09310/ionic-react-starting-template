@@ -8,19 +8,28 @@ import {
   IonTitle,
   IonToolbar,
   useIonActionSheet,
+  useIonAlert,
 } from "@ionic/react";
 import { styled } from "styled-components";
 
 const About = () => {
-  const [present] = useIonActionSheet();
+  const [presentActionSheet] = useIonActionSheet();
+  const [presentAlert] = useIonAlert();
 
   const handlePresentActionSheet = () =>
-    present({
+    presentActionSheet({
       buttons: [
-        { text: "Action 1" },
-        { text: "Action 2" },
-        { text: "Action 3" },
+        { text: "Action 1", handler: handleAlert(1) },
+        { text: "Action 2", handler: handleAlert(2) },
+        { text: "Action 3", handler: handleAlert(3) },
       ],
+    });
+
+  const handleAlert = (id: number) => () =>
+    presentAlert({
+      subHeader: "Important message",
+      message: `You clicked the action N° ${id}`,
+      buttons: ["OK"],
     });
 
   return (

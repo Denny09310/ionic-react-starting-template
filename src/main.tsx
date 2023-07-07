@@ -1,6 +1,6 @@
 import App from "@/App";
 import { store } from "@/app/store";
-import { ThemeProvider } from "@/contexts/ThemeContext";
+import { ThemeProvider } from "@/contexts";
 import { createRoot } from "react-dom/client";
 import { Provider } from "react-redux";
 

@@ -30,10 +30,14 @@ export const ThemeProvider: React.FC<PropsWithChildren<ThemeProviderProps>> = ({
   const [theme, setTheme] = useLocalStorage("theme", defaultTheme);
 
   useEffect(() => {
-    const manifest = document.head.querySelector("link[rel='manifest']")!;
+    const isDark = theme === "dark";
+    document.body.classList.toggle("dark", isDark);
 
-    manifest.setAttribute("href", `/manifest(${theme}).json`);
-    document.body.classList.toggle("dark", theme === "dark");
+    const themeColor = document.head.querySelector('meta[name="theme-color"]')!;
+    themeColor.setAttribute("content", isDark ? "#121212" : "#ffffff");
+
+    const backgroundColor = document.head.querySelector('meta[name="background-color"]')!;
+    backgroundColor.setAttribute("content", isDark ? "#121212" : "#ffffff");
   }, [theme]);
 
   useUpdateEffect(() => setThemeInternal(prefersDark), [prefersDark]);

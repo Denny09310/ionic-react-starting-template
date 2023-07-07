@@ -1,0 +1,25 @@
+{
+    "forecasts": [
+        {
+            "id": 1,
+            "date": "07/07/2023 14:18:28",
+            "summary": "Mild",
+            "temperatureC": 32.5,
+            "temperatureF": 54.5
+        },
+        {
+            "id": 2,
+            "date": "08/07/2023 14:18:28",
+            "summary": "Hot",
+            "temperatureC": 36.5,
+            "temperatureF": 72.5
+        },
+        {
+            "id": 3,
+            "date": "09/07/2023 14:18:28",
+            "summary": "Cold",
+            "temperatureC": 15,
+            "temperatureF": 43.2
+        }
+    ]
+}

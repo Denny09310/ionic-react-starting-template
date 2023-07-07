@@ -133,6 +133,9 @@ devDependencies:
   workbox-strategies:
     specifier: ^7.0.0
     version: 7.0.0
+  workbox-window:
+    specifier: ^7.0.0
+    version: 7.0.0
 
 packages:
 

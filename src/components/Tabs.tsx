@@ -15,6 +15,7 @@ const generateRoutes = (match: RouteComponentProps["match"]) => {
   const baseUrl = match.url;
   const routes = {
     home: baseUrl + "/home",
+    shooting: baseUrl + "/shooting",
     about: baseUrl + "/about",
   };
   return routes;
